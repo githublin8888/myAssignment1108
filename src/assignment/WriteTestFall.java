@@ -9,6 +9,52 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
+        public void testRow() {
+
+            Write test = new Write();
+            test.rowNr("stop");
+            int expected = 0;
+            int actual = test.getNbrOfRows();
+            assertEquals(expected, actual);
+        }
+
+        @Test
+
+        public void testCharacter() {
+
+            Write test = new Write();
+            test.characterNr("stop");
+            int expected = 0;
+            int actual = test.getNbrOfcharacters();
+            assertEquals(expected, actual);
+
+        }
+        @Test
+
+        public void testWord() {
+
+            Write test = new Write();
+            test.wordNr("stop");
+            int expected = 0;
+            int actual = test.getNbrOfWords();
+            assertEquals(expected, actual);
+
+        }
+
+        @Test
+
+        public void testLongestWord() {
+
+            Write test = new Write();
+            test.longWord("stop");
+            String expected ="";
+            String actual = test.getLongestWord();
+            assertEquals(expected, actual);
+
+        }
+
+        @Test
+
         public void testRow1() {
 
             Write test = new Write();
@@ -29,7 +75,6 @@ import static org.junit.Assert.assertEquals;
             int actual = test.getNbrOfRows();
             assertEquals(expected, actual);
         }
-
 
         @Test
 
@@ -130,8 +175,6 @@ import static org.junit.Assert.assertEquals;
             assertEquals(expected, actual);
 
         }
-
-
 
 
     }
