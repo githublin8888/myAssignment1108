@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
-        public void test1() {
+        public void testRow1() {
 
             Write test = new Write();
             test.rowNr("hi");
@@ -21,18 +21,19 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
-        public void test2() {
+        public void testRow2() {
 
             Write test = new Write();
-            test.rowNr(" ");
+            test.rowNr("");
             int expected = 1;
             int actual = test.getNbrOfRows();
             assertEquals(expected, actual);
-
         }
+
+
         @Test
 
-        public void test3() {
+        public void testCharacter1() {
 
             Write test = new Write();
             test.characterNr("how are you");
@@ -45,7 +46,7 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
-        public void test4() {
+        public void testCharacter2() {
 
             Write test = new Write();
             test.characterNr("");
@@ -57,7 +58,7 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
-        public void test9() {
+        public void testCharacter3() {
 
             Write test = new Write();
             test.characterNr("?");
@@ -66,9 +67,21 @@ import static org.junit.Assert.assertEquals;
             assertEquals(expected, actual);
 
         }
+
         @Test
 
-        public void test5() {
+        public void testWord1() {
+
+            Write test = new Write();
+            test.wordNr("");
+            int expected = 0;
+            int actual = test.getNbrOfWords();
+            assertEquals(expected, actual);
+
+        }
+        @Test
+
+        public void testWord2() {
 
             Write test = new Write();
             test.wordNr("hi");
@@ -79,22 +92,23 @@ import static org.junit.Assert.assertEquals;
             assertEquals(expected, actual);
         }
 
+
         @Test
 
-        public void test() {
+        public void testLongestWord1() {
 
             Write test = new Write();
-            test.wordNr("");
-            int expected = 0;
-            int actual = test.getNbrOfWords();
+            test.longWord("hello");
+            test.longWord("hi");
+            test.longWord("How do you do");
+            String expected = "hello";
+            String actual = test.getLongestWord();
             assertEquals(expected, actual);
 
         }
-
-
         @Test
 
-        public void test6() {
+        public void testLongestWord2() {
 
             Write test = new Write();
             test.longWord("how are you");
@@ -107,7 +121,7 @@ import static org.junit.Assert.assertEquals;
 
         @Test
 
-        public void test7() {
+        public void testLongestWord3() {
 
             Write test = new Write();
             test.wordNr("");
@@ -116,19 +130,7 @@ import static org.junit.Assert.assertEquals;
             assertEquals(expected, actual);
 
         }
-        @Test
 
-        public void test8() {
-
-            Write test = new Write();
-            test.longWord("hello");
-            test.longWord("hi");
-            test.longWord("How do you do");
-            String expected = "hello";
-            String actual = test.getLongestWord();
-            assertEquals(expected, actual);
-
-        }
 
 
 

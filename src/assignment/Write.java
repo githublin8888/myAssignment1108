@@ -91,67 +91,6 @@ public class Write {
 
 
 
-/*
- for (int i = 0; i < wordArray.length - 1; i++) {
-            if (wordArray[i].length() == longestWord.length()) {
-                longestWord = wordArray[i] + "" + longestWord;
-            }
-        }
-
-         int wordLength=longestWord.length();
-                for(int j=0; j<longArray.length - 1; j++){
-                if(longArray[i].length()==wordLength){
-                    longestWord=longestWord+" "+longArray[i];
-
-                     //String[] wordArray = text.split("\\s");
-        //countWord = countWord + wordArray.length;
-        //countWord = countWord + text.split("\\s").length;
-
-        //countWord = longArray.length;
-
-        // String[] longWordArray=longestWord.split("\\s");
-
-        delete repeat
-        for (int j = 0; j < longArray.length - 1; j++) {
-                if (longArray[j].length() == characterNr && !longArray[j].equals(longestWord)) {
-
-                        longestWord = longestWord + ", " + longArray[j];
-                }
-                else longestWord = longestWord;
-            }
-            //longestWord = longestWord;
-
-            ======
-
-            for (int j = 0; j < longArray.length - 1; j++) {
-                if (longArray[j].length() == characterNr && !longArray[j].equals(longestWord2)) {
-
-                        longestWord = longestWord2 + ", " + longArray[j];
-                }
-                else longestWord = longestWord2;
-            }
-            =======
-              //String[] newWordArray = longestWord.split("\\s");
-            ArrayList<String> ls = new ArrayList<String>(Arrays.asList(longestWord));
-            for (int k = 0; k < ls.size() - 1; k++) {
-                if (ls.get(1).equals(ls.get(0))) {
-                    ls.remove(1);
-                }
-            }
-
-            ================
-            //to get other words that are as long as the longest word
-            int characterNr = longestWord.length();
-
-            for (int j = 0; j < longArray.length - 1; j++) {
-                if (longArray[j].length() == characterNr) {
-
-                    longestWord = longestWord + " " + longArray[j];
-                }
-
-            }
- */
-
 
 
 
