@@ -39,12 +39,21 @@ public class Write {
         return longestWord;
     }
 
+    public boolean control(String text) {
+        boolean gogo;
+        if ("stop".equals(text)) {
+            gogo = false;
+
+        } else {
+            gogo = true;
+        }
+        return gogo;
+    }
     public void rowNr(String text) {
         if ("stop".equals(text)) {
         } else {
             row++;
         }
-
     }
 
     public void characterNr(String text) {
@@ -98,6 +107,7 @@ public class Write {
         }
 
     }
+
 
 }
 

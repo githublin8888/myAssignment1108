@@ -10,18 +10,22 @@ public class WritePrint {
     public static void main(String[] args) {
 
         Write myText = new Write();
-        String text = "";
-
         Scanner scan = new Scanner(System.in);
-        text = scan.nextLine();
+        String t = scan.nextLine();
 
-        while (!"stop".equals(text)) {
-            myText.rowNr(text);
-            myText.characterNr(text);
-            myText.wordNr(text);
-            myText.longWord(text);
-            text = scan.nextLine();
+        boolean go;
+        go = myText.control(t);
+
+        while (go) {
+            myText.rowNr(t);
+            myText.characterNr(t);
+            myText.wordNr(t);
+            myText.longWord(t);
+
+            t = scan.nextLine();
+            go = myText.control(t);
         }
+
 
         System.out.println(myText.getNbrOfRows() + " row(s)");
         System.out.println(myText.getNbrOfcharacters() + " character(s)");
@@ -31,7 +35,15 @@ public class WritePrint {
 
 
 }
-
+/*
+ while (!"stop".equals(text)) {
+            myText.rowNr(text);
+            myText.characterNr(text);
+            myText.wordNr(text);
+            myText.longWord(text);
+            text = scan.nextLine();
+        }
+ */
 
 
 
