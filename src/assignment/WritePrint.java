@@ -17,11 +17,7 @@ public class WritePrint {
         go = myText.control(t);
 
         while (go) {
-            myText.rowNr(t);
-            myText.characterNr(t);
-            myText.wordNr(t);
-            myText.longWord(t);
-
+            myText.calculateNr(t);
             t = scan.nextLine();
             go = myText.control(t);
         }
@@ -36,7 +32,7 @@ public class WritePrint {
 
 }
 /*
- while (!"stop".equals(text)) {
+    while (!"stop".equals(text)) {
             myText.rowNr(text);
             myText.characterNr(text);
             myText.wordNr(text);
